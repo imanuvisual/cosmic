@@ -1,0 +1,48 @@
+/* Full-page gradient background */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background: linear-gradient(-90deg, #282722, #f59146, #b2a2d3, #02a3da, #6b3d61, #683a5e, #13253d);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+    text-align: center; /* Center text horizontally */
+}
+
+/* Background animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Centering content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Spacing between logo and text */
+}
+
+/* Logo styling */
+img {
+    width: auto;
+    max-width: 99%; /* Restrict size */
+  
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Avoid inline padding/margins */
+    background: transparent;  /*Remove any container background */
+    box-shadow: none; /* Remove shadow if any */
+    border: solid black 1px; /* Remove borders */
+  opacity: 0.95;
+  
+}
+
